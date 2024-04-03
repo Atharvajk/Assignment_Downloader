@@ -40,6 +40,11 @@ app.get('/assign2', function(req, res){
     res.setHeader('Content-disposition', `attachment; filename=${file}`);
     res.download(file); // Set disposition and send it.
   });
+app.get('/assign2/v2', function(req, res){
+    const file = `${__dirname}/assignments/DSBDA_assign2.ipynb`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
 app.get('/assign3', function(req, res){
     const file = `${__dirname}/assignments/Assign3.ipynb`;
     res.setHeader('Content-disposition', `attachment; filename=${file}`);
