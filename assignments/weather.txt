@@ -91,7 +91,7 @@ Context context)
 /*
 //Commands
 
-
+- Start hadoop on "localhost:9870"
 hdfs dfs -mkdir -p /inp2
 
  hdfs dfs -put /home/te/Documents/Assi13Hadoop/sample_weather.txt /inp2
