@@ -18,8 +18,19 @@ const PORT = process.env.PORT || 3000;
 //   const readStream = fs.createReadStream(filePath);
 //   readStream.pipe(res);
 // });
-app.get('/test', function(req, res){
-    const file = `${__dirname}/payment_receipt.pdf`;
+
+app.get('/', function(req, res){
+   
+  const htmlfile = `${__dirname}/test.html`;
+  res.sendFile(htmlfile, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+});
+app.get('/assign1', function(req, res){
+    const file = `${__dirname}/assignments/DSBDAL_1.ipynb`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
     res.download(file); // Set disposition and send it.
   });
 // Start the server
