@@ -96,6 +96,12 @@ app.get('/assign12', function(req, res){
     res.download(file); // Set disposition and send it.
   });
 
+app.get('/papers', function(req, res){
+    const file = `${__dirname}/assignments/papers.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
+
 
 
 
