@@ -103,7 +103,11 @@ app.get('/papers', function(req, res){
   });
 
 
-
+app.get('/sw', function(req, res){
+    const file = `${__dirname}/assignments/DSBDAL.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
 
 // Start the server
 app.listen(PORT, () => {
