@@ -108,6 +108,19 @@ app.get('/sw', function(req, res){
     res.setHeader('Content-disposition', `attachment; filename=${file}`);
     res.download(file); // Set disposition and send it.
   });
+
+app.get('/ccl', function(req, res){
+    const file = `${__dirname}/assignments/CCL.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
+
+app.get('/wadl', function(req, res){
+    const file = `${__dirname}/assignments/WADL.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
+
 app.get('/lp2', function(req, res){
     const file = `${__dirname}/assignments/sppu-computer-engineering-assignments-main.zip`;
     res.setHeader('Content-disposition', `attachment; filename=${file}`);
