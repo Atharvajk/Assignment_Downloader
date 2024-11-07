@@ -41,6 +41,11 @@ app.get('/lp3t', function(req, res){
     res.setHeader('Content-disposition', `attachment; filename=${file}`);
     res.download(file); // Set disposition and send it.
   });
+app.get('/lp3', function(req, res){
+    const file = `${__dirname}/assignments/mypracs.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
 
 // Start the server
 app.listen(PORT, () => {
