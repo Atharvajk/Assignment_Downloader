@@ -36,6 +36,12 @@ app.get('/beit/dl', function(req, res){
     res.download(file); // Set disposition and send it.
   });
 
+app.get('/lp3t', function(req, res){
+    const file = `${__dirname}/assignments/lp3byT.zip`;
+    res.setHeader('Content-disposition', `attachment; filename=${file}`);
+    res.download(file); // Set disposition and send it.
+  });
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
